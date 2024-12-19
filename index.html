@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STRIDE-DREAD Risk Assessment</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>STRIDE-DREAD Risk Assessment</h1>
+
+        <form id="risk-form">
+            <h2>Ancaman STRIDE</h2>
+            <select id="threat" required>
+                <option value="" disabled selected>Pilih ancaman...</option>
+                <option value="spoofing">Spoofing</option>
+                <option value="tampering">Tampering</option>
+                <option value="repudiation">Repudiation</option>
+                <option value="info-disclosure">Information Disclosure</option>
+                <option value="dos">Denial of Service</option>
+                <option value="eop">Elevation of Privilege</option>
+            </select>
+
+            <h2>Penilaian Risiko (DREAD)</h2>
+            <label for="damage-potential">Damage Potential:</label>
+            <input type="range" id="damage-potential" min="0" max="10" value="5" step="1" required>
+            <output id="damage-potential-output">5</output>
+
+            <label for="reproducibility">Reproducibility:</label>
+            <input type="range" id="reproducibility" min="0" max="10" value="5" step="1" required>
+            <output id="reproducibility-output">5</output>
+
+            <label for="exploitability">Exploitability:</label>
+            <input type="range" id="exploitability" min="0" max="10" value="5" step="1" required>
+            <output id="exploitability-output">5</output>
+
+            <label for="affected-users">Affected Users:</label>
+            <input type="range" id="affected-users" min="0" max="10" value="5" step="1" required>
+            <output id="affected-users-output">5</output>
+
+            <label for="discoverability">Discoverability:</label>
+            <input type="range" id="discoverability" min="0" max="10" value="5" step="1" required>
+            <output id="discoverability-output">5</output>
+
+            <button type="submit">Hitung Risiko</button>
+        </form>
+
+        <div id="results">
+            <h2>Hasil Penilaian Risiko</h2>
+            <p id="threat-description">Deskripsi Ancaman: <span>Tidak ada</span></p>
+            <p id="risk-score">Skor Risiko: <span>0</span></p>
+            <p id="recommendations">Rekomendasi Mitigasi: <span>Tidak ada</span></p>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

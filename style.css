@@ -1,0 +1,72 @@
+/* styles.css */
+body {
+    font-family: 'Signika', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #033043;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-size: 16px;
+    color: #333;
+}
+
+input[type=range] {
+    width: 100%;
+}
+
+output {
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    color: #033043;
+}
+
+button {
+    background-color: #033043;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #FDA521;
+}
+
+#results {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#risk-score span {
+    font-weight: bold;
+    color: #007bff;
+}
+
+#recommendations span {
+    font-style: italic;
+    color: #ff6347;
+}
